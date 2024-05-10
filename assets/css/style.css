@@ -697,7 +697,7 @@ section {
   color: #bfbbbba6;
   border-radius: 30px;
   width: fit-content;
-  padding: 5px 20px 5px 25px;
+  padding: 5px 25px 5px 25px;
   border: 1px solid #28292a;
 }
 
@@ -757,6 +757,30 @@ section {
   height: 30px !important;
 } */
 
+.technologies img[src*="express-js-logo.png"]{
+  width: 31px !important;
+}
+
+.technologies img[src*="WordPress.com"]{
+  width: 40px !important;
+}
+.p-wordpress-logo{
+  width: 90px !important;
+  position: relative;
+  display: block;
+}
+.span-wordpress{
+  position: absolute;
+  top: 17%;
+  right: 0px;
+  /* margin-right: 10px; */
+}
+
+.technologies-inmo{
+  padding-left: 10px;
+  padding-right: 30px;
+}
+
 .portfolio-item {
   display: flex; 
 }
@@ -765,6 +789,10 @@ section {
 }
 
 .filter-card:not(.filter-card):not([data-filter="*"]) {
+  display: none; /* Ocultar los elementos que no tienen la clase filter-app y que no tienen el filtro * */
+}
+
+.filter-wordpress:not(.filter-wordpress):not([data-filter="*"]) {
   display: none; /* Ocultar los elementos que no tienen la clase filter-app y que no tienen el filtro * */
 }
 
@@ -822,6 +850,9 @@ section {
     display: flex;
     flex-direction: column;
   }
+  .technologies img[src*="express-js-logo.png"]{
+    width: 25px !important;
+  }
 }
 
 @media (width < 500px) {
@@ -859,6 +890,36 @@ section {
     background-repeat: no-repeat;
     background-position: 40%;
   }
+  .img-inmo{
+    background-image: url("./../../assets/img/portfolio/inmo-front1.2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20%;
+  }
+  .img-tiny{
+    background-image: url("./../../assets/img/portfolio/simple-js.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20%;
+  }
+  .technologies-vet span{
+    display: none;
+  }
+
+  .technologies-vet{
+    width: 97%;
+    gap: 10px;
+    padding: 7px;  
+  }
+  .p-wordpress-logo{
+    width: 110px !important;
+  }
+  .span-wordpress{
+    top: 12%;
+    right: 10px;
+    /* margin-right: 10px; */
+  }
+
 }
 
 
