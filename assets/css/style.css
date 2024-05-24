@@ -324,11 +324,91 @@ h6 {
     line-height: 36px;
   }
 
+  #hero {
+    background-size: cover;
+    background-position: 85% 10%;
+  }
+   
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
+  #hero .hero-container {
+    padding-left: 20px;
+    position: relative;
+    z-index: 2;
+    width: 360px;
+    min-width: 360px;
+    top: -80px;
+  }
+
+  #hero .hero-container h1{
+    font-size: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+  }
+  #hero .hero-container p{
+    font-size: 18px;
+  }
+}
+
+/* .download[_ngcontent-ng-c842918903] {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: none;
+  margin: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  background-color: #1f2022;
+  border: .5px solid #45484b;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.download[_ngcontent-ng-c842918903]:hover {
+  background-color: #c7c7c7;
+  color: #111;
+}
+
+a[_ngcontent-ng-c842918903] {
+  text-decoration: none;
+  color: #fff;
+} */
+
+.download[_ngcontent-ng-c842918903]:hover{
+  color: white;
+}
+
+a[_ngcontent-ng-c842918903] {
+  color: gainsboro;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+a[_ngcontent-ng-c842918903]:hover{
+  background: #149ddd;
+  /* background-color: #37b3ed; */
+
+}
+
+a[_ngcontent-ng-c842918903] i{
+  padding-right: 5px;
+}
+
+.btn-cv{
+  padding-right: 15px ;
+}
+
+.bx-link{
+  padding-left: 3px;
+  transform: translateY(1.5px);
+}
+
+.bx-zoom-in:not(.icon-not-move){
+  transform: translateY(5px);
 }
 
 /*--------------------------------------------------------------
@@ -885,7 +965,7 @@ section {
     background-position: 10%;
   }
   .img-vet{
-    background-image: url("./../../assets/img/portfolio/vetrolling-landing.jpg");
+    background-image: url("./../../assets/img/portfolio/vetrolling-landing-1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 40%;
@@ -897,11 +977,20 @@ section {
     background-position: 20%;
   }
   .img-tiny{
-    background-image: url("./../../assets/img/portfolio/simple-js.JPG");
+    background-image: url("./../../assets/img/portfolio/tinyprojects/simpsons.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 20%;
+    background-position: 50%;
   }
+
+  .img-only{
+    background-image: url("./../../assets/img/portfolio/onlysports-2.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60% 20%;
+    background-size: 190% 120%;
+  }
+
   .technologies-vet span{
     display: none;
   }
@@ -1242,26 +1331,47 @@ section {
   background: #149ddd;
   color: #fff;
 }
-
+/* 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
-.contact .info .phone:hover i {
+.contact .info .phone:hover i,
+.contact .info .linkedin:hover i,
+.contact .info .github:hover i,
+.contact .info .whatsapp:hover i {
+  background: #149ddd;
+  color: #fff;
+} */
+.links-contact{
+  padding: 15px 0px;
+}
+.links-contact i{
+  /* transform: scale(1.1); */
+}
+.links-contact:hover i{
   background: #149ddd;
   color: #fff;
 }
+/* .contact .info .linkedin,
+.contact .info .github,
+.contact .info .whatsapp{
+  padding: 12px 0px;
+}
+.contact .info .linkedin{
+  padding-top: 0px;
+} */
 
-.contact .php-email-form {
+.contact .contact-email-form {
   width: 100%;
   padding: 30px;
   background: #fff;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
-.contact .php-email-form .form-group {
+.contact .contact-email-form .form-group {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form .validate {
+.contact .contact-email-form .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -1269,7 +1379,7 @@ section {
   font-size: 13px;
 }
 
-.contact .php-email-form .error-message {
+.contact .contact-email-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1278,11 +1388,11 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .contact-email-form .error-message br+br {
   margin-top: 25px;
 }
 
-.contact .php-email-form .sent-message {
+.contact .contact-email-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1291,14 +1401,14 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .contact-email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .contact-email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1310,30 +1420,30 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form .form-group {
+.contact .contact-email-form .form-group {
   margin-bottom: 15px;
 }
 
-.contact .php-email-form label {
+.contact .contact-email-form label {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .contact-email-form input,
+.contact .contact-email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
 }
 
-.contact .php-email-form input {
+.contact .contact-email-form input {
   height: 44px;
 }
 
-.contact .php-email-form textarea {
+.contact .contact-email-form textarea {
   padding: 10px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .contact-email-form button[type=submit] {
   background: #149ddd;
   border: 0;
   padding: 10px 24px;
@@ -1342,7 +1452,7 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .contact-email-form button[type=submit]:hover {
   background: #37b3ed;
 }
 

@@ -23,9 +23,14 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+  
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 
   <!-- =======================================================
   * Template Name: iPortfolio
@@ -49,20 +54,23 @@
         <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Tomás César</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="github"><i class="bx bxl-github"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
+          <a target="_blank" href="https://discordapp.com/users/643987643016937502"><i class='bx bxl-discord-alt'></i></a>
+          <a target="_blank" href="https://wa.me/54903513250453" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+          <a target="_blank" href="https://github.com/tomascesar8" class="github"><i class="bx bxl-github"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/tomascesar-dev" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
 
-      <nav id="navbar" class="nav-menu navbar mx-auto pe-3">
+      <nav id="navbar" class="nav-menu navbar mx-auto pe-3 mt-2">
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <!-- <i class="bx bx-file-blank"></i> <span>Resume</span> -->
+          <!-- <li class="mt-5 btn btn-dark"><a href="#" class="btn-cv mb-0 nav-link scrollto"><i class='bx bxs-download'></i> <span>Download CV</span></a></li> -->
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -72,8 +80,10 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Tomás César</h1>
-      <p class="pe-5"><span class="typed" data-typed-items="Full Stack Developer (MERN)"></span><br>
-        </span></p>
+      <p class="pe-5"><span class="typed" data-typed-items="Full Stack Developer (MERN)"></span></p>
+      <a _ngcontent-ng-c842918903="" href="/assets/cv/CV-Tomás César (dev).pdf" target="_blank"  class="download hover btn btn-dark btn-cv">
+        <i class='bx bxs-download'></i> Download CV
+      </a>
     </div>
   </section><!-- End Hero -->
 
@@ -408,8 +418,8 @@
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class=" col-12 flex-wrap portfolio-item filter-card mb-5">
+          <!-- Item CineRolling+ -->
+          <div class=" col-12 flex-wrap portfolio-item mb-lg-5 filter-card mb-5">
             <div class="col-item-description order-1 order-lg-0 col-12 col-lg-6 d-flex flex-column">
               <div class="info">
                 <header>
@@ -421,14 +431,11 @@
                   <p>Cuenta con perfil para administrar contenido (CRUD), registro, login, buscador de películas, lista de favoritos, etc.</p>
                 </div>
                 <div class="ancors my-4">
-                  <a href="https://organizer-eta.vercel.app/" target="_blank" mattooltip="Landing demo" mattooltipclass="tooltip" class="mat-mdc-tooltip-trigger visit btn-projects-details" aria-describedby="cdk-describedby-message-ng-1-2" cdk-describedby-host="ng-1">
+                  <a href="https://cine-rolling.netlify.app" target="_blank" mattooltip="Landing demo" mattooltipclass="tooltip" class="mat-mdc-tooltip-trigger visit btn-projects-details" aria-describedby="cdk-describedby-message-ng-1-2" cdk-describedby-host="ng-1">
                     <i class='bx bx-link-external'></i> Visitar
                   </a>
-                  <a class="btn-projects-details" href="https://github.com/diegoinost02/angular-organizer" target="_blank">
+                  <a class="btn-projects-details" href="https://github.com/tomascesar8/cine-rolling" target="_blank">
                     <i class='bx bxl-github'></i>Frontend
-                  </a>
-                  <a class="btn-projects-details" href="https://github.com/diegoinost02/springboot-organizer" target="_blank">
-                    <i class='bx bxl-github'></i>Backend
                   </a>
                   <a class="btn-projects-details" href="assets/img/portfolio/VETROLLING - Google Chrome 2024-04-16 16-29-35.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox pt-2" title="CineRolling+">
                     <i class='bx bxs-videos'></i> Video
@@ -459,23 +466,35 @@
               <div class="portfolio-wrap img-cine rounded-4 border border-5">
                 <img src="assets/img/portfolio/cine1.JPG" class="img-fluid" alt="">
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/cine-lion.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox pt-2" title="CineRolling+">
-                    <i class='bx bx-zoom-in'></i>
+                  <a href="assets/img/portfolio/cine1.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox pt-2" title="Landing - CineRolling+">
+                    <i class='bx bx-zoom-in icon-not-move'></i>
                   </a>
-                  <a href="portfolio-details.html" title="More Details">
-                    <span class="d-inline-block fs-6 pb-2">About Project</span>                
+                  <!-- <a href="portfolio-details.html" title="More Details">
+                    <span class="d-inline-block fs-6 pb-2">More Details</span>                
+                  </a> -->
+                  <a href="portfolio-details.html#1" title="More Details">
+                    <span class="d-inline-block fs-6 pb-2">More Details</span>
                   </a>
-                  <a href="assets/img/portfolio/cine-lion.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="CineRolling+">
+                  <a href="https://cine-rolling.netlify.app" target="_blank"  title="Tiny-Projects">
                     <span class="d-inline-block fs-6 pb-2">View Page<i class="bx bx-link"></i></span>
-                    <!-- <i class="bx bx-plus"></i> -->
                   </a>
+
+                  <a href="assets/img/portfolio/cine-lion.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Home - CineRolling+">
+                  </a>
+
+                  <a href="assets/img/portfolio/cine5.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Home 2 - CineRolling+">
+                  </a>
+
+                  <a href="assets/img/portfolio/cine6.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Page Admin - CineRolling+">
+                  </a>
+
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-12 col-md-6 portfolio-item vet-project filter-app mt-5">
-      
+          <!-- Item Vet-Rolling -->
+          <div class="col-lg-12 col-md-6 portfolio-item mb-lg-5 vet-project filter-app mt-5">
             <div class="col-item-description order-1 order-lg-1 col-12 col-lg-6 d-flex flex-column">
               <div class="info">
                 <header>
@@ -483,17 +502,17 @@
                 </header>
                 <div class="text">
                   <h2>Vet-Rolling </h2>
-                  <p>Plataforma para gestión veterinaria (turnos y usuarios)</p>
+                  <p>Plataforma para gestionar turnos y usuarios de veterinaria.</p>
                   <p>Se utiliza React.js para el frontend, Node.js y Express para el backend y MongoDB (base de datos NoSQL) para el almacenamiento y recuperación de datos</p>
                 </div>
                 <div class="ancors my-4">
-                  <a href="https://organizer-eta.vercel.app/" target="_blank" mattooltip="Landing demo" mattooltipclass="tooltip" class="mat-mdc-tooltip-trigger visit btn-projects-details" aria-describedby="cdk-describedby-message-ng-1-2" cdk-describedby-host="ng-1">
+                  <a href="https://vet-rolling.netlify.app" target="_blank" mattooltip="Landing demo" mattooltipclass="tooltip" class="mat-mdc-tooltip-trigger visit btn-projects-details" aria-describedby="cdk-describedby-message-ng-1-2" cdk-describedby-host="ng-1">
                     <i class='bx bx-link-external'></i> Visitar
                   </a>
-                  <a class="btn-projects-details" href="https://github.com/diegoinost02/angular-organizer" target="_blank">
+                  <a class="btn-projects-details" href="https://github.com/tomascesar8/vetrolling-frontend" target="_blank">
                     <i class='bx bxl-github'></i>Frontend
                   </a>
-                  <a class="btn-projects-details" href="https://github.com/diegoinost02/springboot-organizer" target="_blank">
+                  <a class="btn-projects-details" href="https://github.com/tomascesar8/vetrolling-backend" target="_blank">
                     <i class='bx bxl-github'></i>Backend
                   </a>
                   <a class="btn-projects-details" href="assets/img/portfolio/VETROLLING - Google Chrome 2024-04-16 16-29-35.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox pt-2" title="CineRolling+">
@@ -540,16 +559,18 @@
 
             <div class="col-12 col-lg-6">
               <div class="img-vet col-item-img portfolio-wrap rounded-4 border border-5">
-                <img src="assets/img/portfolio/vetrolling-landing.jpg" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/vetrolling-landing-1.jpg" class="img-fluid" alt="">
                 <div class="portfolio-links col-12">
-                  <a href="assets/img/portfolio/vetrolling-landing.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="CineRolling+">
+                  <a href="assets/img/portfolio/vetrolling-landing-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Landing - VetRolling">
                     <i class='bx bx-zoom-in'></i>
                   </a>
-                  <a href="portfolio-details.html" title="More Details">
-                    <span class="d-inline-block fs-6 pb-2">About Project</span>
+                  <a href="portfolio-details.html#2" title="More Details">
+                    <span class="d-inline-block fs-6 pb-2">More Details</span>
                   </a>
-                  <a href="assets/img/portfolio/vetrolling-landing.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="CineRolling+">
+                  <a href="https://vet-rolling.netlify.app/" target="_blank"  title="Tiny-Projects">
                     <span class="d-inline-block fs-6 pb-2">View Page<i class="bx bx-link"></i></span>
+                  </a>
+                  <a href="assets/img/portfolio/vetrolling-admin-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Admin Page - VetRolling">
                   </a>
                 </div>
               </div>
@@ -558,7 +579,7 @@
         
 
           <!-- ITEM WORDPRESS -->
-          <div class="col-lg-12 col-md-6 portfolio-item vet-project filter-wordpress mt-5">
+          <div class="col-lg-12 col-md-6 portfolio-item mb-lg-5 vet-project filter-wordpress mt-5">
       
             <div class="col-item-description order-1 order-lg-0 col-12 col-lg-6 d-flex flex-column">
               <div class="info">
@@ -571,14 +592,8 @@
                   <p>Se utiliza React.js para el frontend, Node.js y Express para el backend y MongoDB (base de datos NoSQL) para el almacenamiento y recuperación de datos</p>
                 </div>
                 <div class="ancors my-4">
-                  <a href="https://organizer-eta.vercel.app/" target="_blank" mattooltip="Landing demo" mattooltipclass="tooltip" class="mat-mdc-tooltip-trigger visit btn-projects-details" aria-describedby="cdk-describedby-message-ng-1-2" cdk-describedby-host="ng-1">
+                  <a href="https://inmobiliariarojasroganti.com" target="_blank" mattooltip="Landing demo" mattooltipclass="tooltip" class="mat-mdc-tooltip-trigger visit btn-projects-details" aria-describedby="cdk-describedby-message-ng-1-2" cdk-describedby-host="ng-1">
                     <i class='bx bx-link-external'></i> Visitar
-                  </a>
-                  <a class="btn-projects-details" href="https://github.com/diegoinost02/angular-organizer" target="_blank">
-                    <i class='bx bxl-github'></i>Frontend
-                  </a>
-                  <a class="btn-projects-details" href="https://github.com/diegoinost02/springboot-organizer" target="_blank">
-                    <i class='bx bxl-github'></i>Backend
                   </a>
                   <a class="btn-projects-details" href="assets/img/portfolio/VETROLLING - Google Chrome 2024-04-16 16-29-35.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox pt-2" title="CineRolling+">
                     <i class='bx bxs-videos'></i> Video
@@ -602,84 +617,182 @@
               <div class="img-inmo col-item-img portfolio-wrap rounded-4 border border-5">
                 <img src="assets/img/portfolio/inmo-front1.2.jpg" class="img-fluid" alt="">
                 <div class="portfolio-links col-12">
-                  <a href="assets/img/portfolio/inmo-front1.2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="CineRolling+">
+                  <a href="assets/img/portfolio/inmo-front1.2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Inmobiliaria Rojas Roganti 1">
                     <i class='bx bx-zoom-in'></i>
                   </a>
-                  <a href="portfolio-details.html" title="More Details">
-                    <span class="d-inline-block fs-6 pb-2">About Project</span>
+                  <a href="portfolio-details.html#3" title="More Details">
+                    <span class="d-inline-block fs-6 pb-2">More Details</span>
                   </a>
-                  <a href="assets/img/portfolio/inmo-front1.2.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="CineRolling+">
+                  <a href="https://inmobiliariarojasroganti.com/" target="_blank"  title="Inmobiliaria Rojas Roganti">
                     <span class="d-inline-block fs-6 pb-2">View Page<i class="bx bx-link"></i></span>
                   </a>
-                  
-                  <a href="assets/img/portfolio/cine-full.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="CineRolling+">
+
+                  <a href="assets/img/portfolio/inmo/1.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Inmobiliaria Rojas Roganti 2">
                   </a>
-                  
+                  <a href="assets/img/portfolio/inmo/2.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Inmobiliaria Rojas Roganti 3">
+                  </a>
+                  <a href="assets/img/portfolio/inmo/3.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Inmobiliaria Rojas Roganti 4">
+                  </a>
+                  <a href="assets/img/portfolio/inmo/4.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Inmobiliaria Rojas Roganti 5">
+                  </a>
+                  <a href="assets/img/portfolio/inmo/5.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Inmobiliaria Rojas Roganti 6">
+                  </a>
+
                 </div>
               </div>
             </div>
           </div>
         
           <!-- Item Tinyprojecs -->
-          <div class="col-lg-12 col-md-6 portfolio-item vet-project filter-card mt-5">
+          <div class="col-lg-12 col-md-6 portfolio-item mb-lg-5 vet-project filter-card mt-5">
       
-            <div class="col-item-description order-0 order-lg-1 col-12 col-lg-6 d-flex flex-column">
+            <div class="col-item-description order-1 order-lg-1 col-12 col-lg-6 d-flex flex-column">
               <div class="info">
                 <header>
                   <h3>FRONTEND</h3>
                 </header>
                 <div class="text">
-                  <h2>Tiny-Projecs Javascript</h2>
+                  <h2>TinyProjecs Javascript</h2>
                   <p>Varios proyectos simples con Javascript</p>
                   <p>
-                    - Ecommerce - CRUD API Simpsons - Lista de tareas - Vaca en corral - Fecha y hora - Clon de Google - Cronómetro - Temporizador - Lanzar dado
+                    - Ecommerce - Simpsons CRUD - Lista de tareas - Vaca en corral - Fecha y hora - Clon de Google - Cronómetro - Temporizador - Lanzar dado
                   </p> 
                 </div>
                 <div class="ancors my-4">
-                  <a href="https://organizer-eta.vercel.app/" target="_blank" mattooltip="Landing demo" mattooltipclass="tooltip" class="mat-mdc-tooltip-trigger visit btn-projects-details" aria-describedby="cdk-describedby-message-ng-1-2" cdk-describedby-host="ng-1">
+                  <a href="https://tinyprojects-js.netlify.app" target="_blank" mattooltip="Landing demo" mattooltipclass="tooltip" class="mat-mdc-tooltip-trigger visit btn-projects-details" aria-describedby="cdk-describedby-message-ng-1-2" cdk-describedby-host="ng-1">
                     <i class='bx bx-link-external'></i> Visitar
                   </a>
-                  <a class="btn-projects-details" href="https://github.com/diegoinost02/angular-organizer" target="_blank">
+                  <a class="btn-projects-details" href="https://github.com/tomascesar8/tinyprojects-js" target="_blank">
                     <i class='bx bxl-github'></i>Frontend
-                  </a>
-                  <a class="btn-projects-details" href="https://github.com/diegoinost02/springboot-organizer" target="_blank">
-                    <i class='bx bxl-github'></i>Backend
                   </a>
                   <a class="btn-projects-details" href="assets/img/portfolio/VETROLLING - Google Chrome 2024-04-16 16-29-35.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox pt-2" title="CineRolling+">
                     <i class='bx bxs-videos'></i> Video
                   </a>
                 </div>
 
-                <div class="technologies technologies-inmo">
-                  <p class="p-wordpress-logo">
-                    <img class="" src="assets/img/portfolio/WordPress.com.svg" alt="CSS3" />
-                    <span class="span-wordpress">Wordpress</span>
+                <div class="technologies">
+                  <p class="p-js">
+                    <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript" />
+                    <span class="js">Javascript</span>
                   </p>
                   <p>
                     <img class="" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" alt="CSS3" />
                     <span>CSS</span>
                   </p>
-                </div>    
+                  <p>
+                    <img class="" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" alt="HTML5" />
+                    <span>HTML</span>
+                  </p>
+                  <p class="p-bootstrap">
+                    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg" alt="Bootstrap"/>
+                    <span>Bootstrap </span>
+                  </p>
+                </div>  
               </div>
             </div>
 
             <div class="col-12 col-lg-6">
               <div class="img-tiny col-item-img portfolio-wrap rounded-4 border border-5">
-                <img src="assets/img/portfolio/simple-js.JPG" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/tinyprojects/simpsons.jpg" class="img-fluid" alt="">
                 <div class="portfolio-links col-12">
-                  <a href="assets/img/portfolio/simple-js.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="CineRolling+">
+                  <!-- <a href="assets/img/portfolio/tinyprojects/landing.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tiny-Projects">
+                    <i class='bx bx-zoom-in'></i>
+                  </a> -->
+                  <a href="assets/img/portfolio/tinyprojects/simpsons.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Simpsons CRUD - Tiny-Projects">
                     <i class='bx bx-zoom-in'></i>
                   </a>
-                  <a href="portfolio-details.html" title="More Details">
-                    <span class="d-inline-block fs-6 pb-2">About Project</span>
+                  <a href="portfolio-details.html#4" title="More Details">
+                    <span class="d-inline-block fs-6 pb-2">More Details</span>
                   </a>
-                  <a href="assets/img/portfolio/simple-js.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="CineRolling+">
+                  <a href="https://tinyprojects-js.netlify.app" target="_blank"  title="Tiny-Projects">
                     <span class="d-inline-block fs-6 pb-2">View Page<i class="bx bx-link"></i></span>
                   </a>
                   
-                  <a href="assets/img/portfolio/cine-full.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="CineRolling+">
+                  <a href="assets/img/portfolio/tinyprojects/carrito.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Ecommerce - TinyProjects">
                   </a>
-                  
+
+                  <a href="assets/img/portfolio/tinyprojects/lista-tareas.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Lista de tareas - TinyProjects">
+                  </a>
+
+                  <a href="assets/img/portfolio/tinyprojects/vaca.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Vaca en corral - TinyProjects">
+                  </a>
+
+                  <a href="assets/img/portfolio/tinyprojects/reloj.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Fecha y hora - TinyProjects">
+                  </a>
+
+                  <a href="assets/img/portfolio/tinyprojects/clon-google.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Clon de google - TinyProjects">
+                  </a>
+
+                  <a href="assets/img/portfolio/tinyprojects/cronometro.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Cronómetro - TinyProjects">
+                  </a>
+
+                  <a href="assets/img/portfolio/tinyprojects/temporizador.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Temporizador - TinyProjects">
+                  </a>
+
+                  <a href="assets/img/portfolio/tinyprojects/dado.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox d-none" title="Tirar dado - TinyProjects">
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item OnlySports -->
+          <div class=" col-12 flex-wrap portfolio-item mb-lg-5 filter-card mb-2">
+            <div class="col-item-description order-1 order-lg-0 col-12 col-lg-6 d-flex flex-column">
+              <div class="info">
+                <header>
+                  <h3>FRONTEND</h3>
+                </header>
+                <div class="text">
+                  <h2>OnlySports</h2>
+                  <p>Página estática para blog de deportes (mi primer proyecto)</p>
+                  <p>Se enfoca en la interfaz gráfica. Aplicando HTML para estructurar el contenido y CSS para dar estilo y diseño a esa estructura.<br>
+                  También se utiliza Bootstrap como framework.</p>
+                </div>
+                <div class="ancors my-4">
+                  <a href="https://onlysports.netlify.app" target="_blank" mattooltip="Landing demo" mattooltipclass="tooltip" class="mat-mdc-tooltip-trigger visit btn-projects-details" aria-describedby="cdk-describedby-message-ng-1-2" cdk-describedby-host="ng-1">
+                    <i class='bx bx-link-external'></i> Visitar
+                  </a>
+                  <a class="btn-projects-details" href="https://github.com/tomascesar8/onlysports" target="_blank">
+                    <i class='bx bxl-github'></i>Frontend
+                  </a>
+                  <a class="btn-projects-details" href="assets/img/portfolio/VETROLLING - Google Chrome 2024-04-16 16-29-35.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox pt-2" title="CineRolling+">
+                    <i class='bx bxs-videos'></i> Video
+                  </a>
+                </div>
+                <div class="technologies">
+                  <p>
+                    <img class="" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" alt="CSS3" />
+                    <span>CSS</span>
+                  </p>
+                  <p>
+                    <img class="" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" alt="HTML5" />
+                    <span>HTML</span>
+                  </p>
+                  <p class="p-bootstrap">
+                    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg" alt="Bootstrap"/>
+                    <span>Bootstrap </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-item-img order-0 order-lg-1 mt-3 col-12 col-lg-6">
+              <div class="portfolio-wrap img-only rounded-4 border border-5">
+                <img src="assets/img/portfolio/onlysports-2.JPG" class="img-fluid" alt="">
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/onlysports-2.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox pt-2" title="OnlySports">
+                    <i class='bx bx-zoom-in icon-not-move'></i>
+                  </a>
+
+                  <a href="portfolio-details.html#5" title="More Details">
+                    <span class="d-inline-block fs-6 pb-2">More Details</span>
+                  </a>
+
+                  <a href="https://onlysports.netlify.app/" target="_blank"  title="OnlySports">
+                    <span class="d-inline-block fs-6 pb-2">View Page<i class="bx bx-link"></i></span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -691,7 +804,7 @@
     </section><!-- End Portfolio Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    <!-- <section id="services" class="services">
       <div class="container">
 
         <div class="section-title">
@@ -733,10 +846,11 @@
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section> -->
+    <!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
+    <!-- <section id="testimonials" class="testimonials section-bg">
       <div class="container">
 
         <div class="section-title">
@@ -758,9 +872,10 @@
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div> -->
+            <!-- End testimonial item -->
 
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -771,9 +886,10 @@
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div> -->
+            <!-- End testimonial item -->
 
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -784,9 +900,10 @@
                 <h3>Jena Karlis</h3>
                 <h4>Store Owner</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div> -->
+            <!-- End testimonial item -->
 
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -797,9 +914,10 @@
                 <h3>Matt Brandon</h3>
                 <h4>Freelancer</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div> -->
+            <!-- End testimonial item -->
 
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -810,53 +928,88 @@
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
               </div>
-            </div><!-- End testimonial item -->
-
-          </div>
+            </div> -->
+            <!-- End testimonial item -->
+            
+          <!-- </div>
           <div class="swiper-pagination"></div>
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
-
+    </section> -->
+    <!-- End Testimonials Section -->
+    
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p></p>
         </div>
-
+        
         <div class="row" data-aos="fade-in">
-
+          
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
-              </div>
-
-              <div class="email">
+              <!-- <div class="mb-5">
+                <h3>Podés contacterme por los siguientes medios:</h3>
+              </div> -->
+              
+              <div class="links-contact email">
                 <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>info@example.com</p>
+                <h4>Email</h4>
+                <a class="ps-3" href="mailto:tomascesar.dev@gmail.com">tomascesar.dev@gmail.com</a>
+                <!-- <p>tomascesar.dev@gmail.com</p> -->
               </div>
 
-              <div class="phone">
+              <div class="links-contact linkedin">
+                <i class='bx bxl-linkedin fs-4'></i>
+                <!-- <i class='bx bxl-linkedin-square fs-3' ></i> -->
+                <h4>Linkedin</h4>
+                <a class="ps-3" href="https://www.linkedin.com/in/tomascesar-dev/" target="_blank">/tomascesar-dev</a>
+              </div>
+
+              
+              <div class="links-contact discord">
+                <i class='bx bxl-discord-alt fs-4'></i>
+                <h4>Discord</h4>
+                <a class="ps-3" href="https://discordapp.com/users/643987643016937502" target="_blank">tomascesar93</a>
+              </div>
+             
+              <div class="links-contact whatsapp">
+                <i class='bx bxl-whatsapp fs-3'></i>
+                <h4>WhatsApp</h4>
+                <a class="ps-3" href="https://wa.me/54903513250453" target="_blank">+54 9 0351 3250453</a>
+              </div>
+
+              <!-- <div class="links-contact phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <a class="ps-3" href="tel:+54903513250453" target="_blank"> +54 9 0351 3250453</a>
+              </div> -->
+
+              <!-- <div class="links-contact address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p class="mb-0 pb-0">Córdoba, Argentina</p>
+              </div> -->
+
+              <div class="links-contact github">
+                <i class='bx bxl-github fs-3'></i>
+                <h4>Github</h4>
+                <a class="ps-3" href="https://github.com/tomascesar8" target="_blank">/tomascesar8</a>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              
+
+              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe> -->
             </div>
 
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -881,7 +1034,31 @@
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+            </form> -->
+
+            <form id="contactForm" class="contact-email-form">
+              <div class="row">
+                  <div class="form-group col-md-6">
+                      <label for="name">Your Name</label>
+                      <input type="text" name="name" class="form-control" id="name" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <label for="email">Your Email</label>
+                      <input type="email" class="form-control" name="email" id="email" required>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+          
+            
           </div>
 
         </div>
@@ -933,7 +1110,11 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/infoProjects.js"></script>
+  <!-- <script src="assets/js/details-proyects.js"></script> -->
+  <script src="assets/js/emailContact.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
