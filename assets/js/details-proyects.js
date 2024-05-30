@@ -25,7 +25,7 @@ const loadProjectDetails = (projectId) => {
 
       if (project.id==2) {
         portfolioInfo.innerHTML = `
-          <h3>${project.title}</h3>
+          <h2 class="fw-bold mb-3" style="color: #173b6c">${project.title}</h2>
           <p class="fw-bold fst-italic text-secondary">${project.subtitle}</p>
           <ul>
               <li><strong>Category</strong>: ${project.category}</li>
@@ -128,7 +128,10 @@ const loadProjectDetails = (projectId) => {
           // Insertar la información del proyecto
       // Insertar la información del proyecto
       portfolioInfo.innerHTML = `
-          <h3>${project.title}</h3>
+          ${project.title.length < 15 ? `<h2 class="fw-bold mb-3" style="color: #173b6c">${project.title}</h2>` 
+          : 
+          `<h3 class="fw-bold mb-3" style="color: #173b6c">${project.title}</h3>`}
+          
           <p class="fw-bold fst-italic text-secondary">${project.subtitle}</p>
           <ul>
               <li><strong>Category</strong>: ${project.category}</li>

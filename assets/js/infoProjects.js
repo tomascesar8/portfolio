@@ -9,7 +9,7 @@
       client: "RollingCode School",
       date: "January 2023 - March 2023",
       url: "http://cine-rolling.netlify.app",
-      technologies: "Javascript, HTML, CSS y Bootstrap.",
+      technologies: "JavaScript, HTML, CSS y Bootstrap.",
       deploy: "Netlify",
       description: {
         overview: "Se desarrolla una web con catálogo de películas.",
@@ -21,7 +21,7 @@
           "Sección de administrador para modificar el contenido."
         ],
         details: [
-          "Desarrollado con HTML, CSS, Bootstrap y Javascript.",
+          "Desarrollado con HTML, CSS, Bootstrap y JavaScript.",
           "En cuanto al CRUD y manejo de información se utilizó Local Storage.",
           "Vista adaptada para vista desktop, tablet y mobile (vertical y horizontal).",
           "Herramientas de trabajo: Trello, Git y GitHub."
@@ -37,13 +37,13 @@
     },
     {
       id: 2,
-      title: "VET-ROLLING",
+      title: "Vet-Rolling",
       subtitle: "Plataforma de gestión veterinaria",
       category: "Web Development",
       client: "RollingCode School",
       date: "January 2024 - March 2024",
       url: "http://vet-rolling.netlify.app",
-      technologies: "Reactjs, MongoDB, Nodejs, Expressjs, Javascript, HTML, CSS, Bootstrap",
+      technologies: "Reactjs, MongoDB, Nodejs, Expressjs, JavaScript, HTML, CSS, Bootstrap",
       deploy: "Netlify (Frontend) - Render (Backend)",
       description: {
         overview: "VETROLLING es una aplicación web para veterinarias que integra todas las tecnologías del Stack MERN, tanto en el frontend como en el backend.",
@@ -107,16 +107,16 @@
     },
     {
       id: 4,
-      title: "TinyProjects Javascript",
-      subtitle: "Pequeños proyectos realizados con Javascript",
+      title: "TinyProjects JavaScript",
+      subtitle: "Pequeños proyectos realizados con JavaScript",
       category: "Web Development",
       client: "RollingCode School",
       date: "January 2023 - March 2023",
       url: "http://tinyprojects-js.netlify.app",
-      technologies: "Javascript, HTML, CSS y Bootstrap.",
+      technologies: "JavaScript, HTML, CSS y Bootstrap.",
       deploy: "Netlify",
       description: {
-        overview: "Algunos proyectos realizados durante mis primeros contactos con Javascript.",
+        overview: "Algunos proyectos realizados durante mis primeros contactos con JavaScript.",
         features: [
           "Ecommerce",
           "Simpsons CRUD",
@@ -132,7 +132,7 @@
           "Cada proyecto muestra mi capacidad para resolver problemas encontrando soluciones creativas.",
           "Implementación de lógica básica de programación.",
           "Diseño adaptado para diferentes dispositivos.",
-          "Utilización de tecnologías como HTML, CSS y Javascript."
+          "Utilización de tecnologías como HTML, CSS y JavaScript."
         ]
       },
       images: [
