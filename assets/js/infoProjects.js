@@ -129,10 +129,8 @@
           "Tirar dado"
         ],
         details: [
-          "Cada proyecto muestra mi capacidad para resolver problemas encontrando soluciones creativas.",
-          "Implementación de lógica básica de programación.",
-          "Diseño adaptado para diferentes dispositivos.",
-          "Utilización de tecnologías como HTML, CSS y JavaScript."
+          "Utilización de tecnologías como HTML, CSS y JavaScript.",
+          "Cada proyecto demuestra capacidad para resolver problemas encontrando soluciones creativas."
         ]
       },
       images: [
@@ -161,14 +159,11 @@
         overview: "Blog sobre deportes creado con HTML, CSS y Bootstrap.",
         features: [
           "Páginas de inicio, entrada de cada noticia, contacto, galería de fotos, acerca de nosotros e inicio de sesión.",
-          "Modal para registro.",
-          "Diseño responsive adaptable a desktop, celular y tablet."
+          "Modal para formulario de registro."
         ],
         details: [
           "Estructura de navegación clara y fácil de usar.",
-          "Optimización para SEO y rendimiento.",
-          "Integración de comentarios y formularios de contacto.",
-          "Gestión de contenido mediante un CMS (WordPress)."
+          "Diseño responsivo adaptable a desktop, celulares y tablet."
         ]
       },
       images: [

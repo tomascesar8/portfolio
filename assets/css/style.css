@@ -779,6 +779,10 @@ section {
     text-decoration: none;
 }
 
+.filter-wordpress, .filter-tiny, .filter-only{
+  margin-top: 4em !important;
+}
+
 .technologies{
   display: flex;
   gap: 25px;
@@ -832,6 +836,14 @@ section {
   margin: 0;
 }
 
+.technologies-vet p{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .technologies img{
   width: 25px !important;
   height: 25px !important;
@@ -870,6 +882,7 @@ section {
 .technologies-inmo{
   padding-left: 10px;
   padding-right: 30px;
+  /* transform: translate(250px, -62px); */
 }
 
 .portfolio-item {
@@ -1020,6 +1033,8 @@ section {
     /* margin-right: 10px; */
   }
 
+  
+
 }
 
 
@@ -1129,8 +1144,27 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+#portfolio {
+  margin-bottom: 2em !important;
+}
+
+.icon-more-details{
+  transform: translateY(1.5px);
+}
+
+.icon-view{
+  transform: translateY(1.5px);
+  padding-left: 3px;
+}
+
 .services .icon-box {
   margin-bottom: 20px;
+}
+
+#portfolio-flters{
+  background-color: #f2f2f6 !important;
+  margin-bottom: 70px !important;
+  border: #dbe2ee 1px solid !important;
 }
 
 .services .icon {

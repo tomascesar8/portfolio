@@ -25,13 +25,13 @@ const loadProjectDetails = (projectId) => {
 
       if (project.id==2) {
         portfolioInfo.innerHTML = `
-          <h2 class="fw-bold mb-3" style="color: #173b6c">${project.title}</h2>
+          <h2 class="fw-bold mb-3"> <a class="text-decoration-underline" href="${project.url}" target="_blank"> ${project.title} </a> </h2>
           <p class="fw-bold fst-italic text-secondary">${project.subtitle}</p>
           <ul>
               <li><strong>Category</strong>: ${project.category}</li>
               <li><strong>Client</strong>: ${project.client}</li>
               <li><strong>Date</strong>: ${project.date}</li>
-              <li><strong>Project URL</strong>: <a href="${project.url}" target="_blank">${project.url}</a></li>
+              <li><strong>Project URL</strong>: <a class="text-decoration-underline" href="${project.url}" target="_blank">${project.url}</a></li>
               <p>
                 <p className="mb-2 subtitle-about-us text-decoration-underline"><strong class="text-decoration-underline">Frontend:</strong></p>
                 <li>
@@ -130,14 +130,14 @@ const loadProjectDetails = (projectId) => {
       portfolioInfo.innerHTML = `
           ${project.title.length < 15 ? `<h2 class="fw-bold mb-3" style="color: #173b6c">${project.title}</h2>` 
           : 
-          `<h3 class="fw-bold mb-3" style="color: #173b6c">${project.title}</h3>`}
+          `<h3 class="fw-bold mb-3"><a class="text-decoration-underline" href="${project.url}" target="_blank"> ${project.title} </a></h3>`}
           
           <p class="fw-bold fst-italic text-secondary">${project.subtitle}</p>
           <ul>
               <li><strong>Category</strong>: ${project.category}</li>
               <li><strong>Client</strong>: ${project.client}</li>
               <li><strong>Date</strong>: ${project.date}</li>
-              <li><strong>Project URL</strong>: <a href="${project.url}" target="_blank">${project.url}</a></li>
+              <li><strong>Project URL</strong>: <a class="text-decoration-underline" href="${project.url}" target="_blank">${project.url}</a></li>
               <li><strong>Technologies:</strong> ${project.technologies}</li>
               ${project.id==3 ? 
                 `<li><strong>Theme: </strong> ${project.theme}</li>
@@ -170,55 +170,3 @@ const loadProjectDetails = (projectId) => {
 const projectId = window.location.hash.substring(1);
 loadProjectDetails(projectId);
 
-
-
-
-
-//! console.log(window.location.hash.slice(1))
-
-// const saveProjects =()=>{
-//   const projectsLS = JSON.parse(localStorage.getItem('portfolio-projects'));
-//   console.log('hola');
-//   return projectsLS;
-// }
-
-// const allProjects = saveProjects();
-// console.log(allProjects);
-// // Obtener el ID del proyecto desde la URL
-// const projectId = window.location.hash.substring(2); 
-// console.log(projectId);
-//! const project = allProjects.find(proj => proj.id == projectId);
-
-
-
-
-
-
-
-
-// // Insertar la información del proyecto en el HTML
-// if (project) {
-//   document.getElementById('project-title').innerText = project.title;
-//   document.getElementById('project-description').innerText = project.description;
-
-//   const projectInfo = document.getElementById('project-info');
-//   projectInfo.innerHTML = `
-//     <li><strong>Category</strong>: ${project.category}</li>
-//     <li><strong>Client</strong>: ${project.client}</li>
-//     <li><strong>Project date</strong>: ${project.date}</li>
-//     <li><strong>Project URL</strong>: <a href="${project.url}">${project.url}</a></li>
-//   `;
-
-//   const projectImages = document.getElementById('project-images');
-//   project.images.forEach(image => {
-//     const imgElement = document.createElement('div');
-//     imgElement.classList.add('swiper-slide');
-//     imgElement.innerHTML = `<img src="${image}" alt="">`;
-//     projectImages.appendChild(imgElement);
-//   });
-// } else {
-//   document.getElementById('project-title').innerText = 'Project not found';
-//   document.getElementById('project-description').innerText = '';
-//   document.getElementById('project-info').innerHTML = '';
-//   document.getElementById('project-images').innerHTML = '';
-// }
