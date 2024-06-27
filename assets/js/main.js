@@ -45,22 +45,41 @@
   /**
    * Navbar links active state on scroll
    */
-  let navbarlinks = select('#navbar .scrollto', true)
+  /**
+ * Navbar links active state on scroll
+ */
+let navbarlinks = select('#navbar .scrollto', true);
+
   const navbarlinksActive = () => {
-    let position = window.scrollY + 200
+    let position = window.scrollY + 200;
+  
     navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
-      if (!section) return
+      if (!navbarlink.hash) return;
+  
+      let section = select(navbarlink.hash);
+      if (!section) return;
+  
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active')
+        navbarlink.classList.add('active');
       } else {
-        navbarlink.classList.remove('active')
+        navbarlink.classList.remove('active');
       }
-    })
-  }
-  window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive)
+    });
+  
+    // Check if the scroll position is in the skills section
+    let skillsSection = select('#skills');
+    let aboutLink = select('a[href="#about"]');
+  
+    if (skillsSection) {
+      if (position >= skillsSection.offsetTop && position <= (skillsSection.offsetTop + skillsSection.offsetHeight)) {
+        aboutLink.classList.add('active');
+      }
+    }
+  };
+  
+  window.addEventListener('load', navbarlinksActive);
+  onscroll(document, navbarlinksActive);
+  
 
   /**
    * Scrolls to an element with header offset
